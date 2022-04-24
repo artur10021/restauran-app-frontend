@@ -1,0 +1,23 @@
+.header{
+  background-color: black;
+  display: flex;
+  height: 100px;
+  .logoImg{
+    position: absolute;
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  .navigation{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .link{
+      color: darkred;
+      padding: 30px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+  }
+}
