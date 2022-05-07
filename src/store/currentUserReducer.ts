@@ -4,17 +4,20 @@ interface currentUserInitialState{
     roles: string[],
 }
 
-const initialState: currentUserInitialState={
-    roles: ["rrrrr"],
+let userRoles:string[] = [];
+if(localStorage.getItem('roles')){
+    const r:any = localStorage.getItem('roles')
+    userRoles = JSON.parse(r);
 }
-
-export const currentUserReducer = (state = initialState, action:ActionType) => {
+const initialState: currentUserInitialState={
+    roles: userRoles,
+}
+export const currentUserReducer = (state = initialState, action:ActionType):Object => {
     switch (action.type){
         case "SET_SESSION_ROLE":
-            console.log(action.payload)
             return {...state, roles: action.payload}
         default:
-            return state;
+            return {...state};
     }
 }
 

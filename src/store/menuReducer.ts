@@ -15,6 +15,8 @@ export const menuReducer = (state = initialState, action:ActionType):Burgers =>{
     switch (action.type){
         case "LOAD_BURGERS":
             return {...state, burgers: action.payload}
+        case "ADD_BURGER_TO_MENU":
+            return {...state, burgers: [...state.burgers, action.payload]}
         case "IS_LOADING":
             return {...state, loading: action.payload}
         default:
@@ -22,4 +24,5 @@ export const menuReducer = (state = initialState, action:ActionType):Burgers =>{
     }
 }
 
-export const addBurgerAC = (payload: BurgerItemDto)=>({type:"LOAD_BURGERS", payload: payload});
+export const loadBurgerAC = (payload: BurgerItemDto)=>({type:"LOAD_BURGERS", payload: payload});
+export const addBurgerToMenuAC = (payload: BurgerItemDto)=>({type:"ADD_BURGER_TO_MENU", payload: payload});

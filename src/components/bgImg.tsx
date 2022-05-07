@@ -11,3 +11,4 @@ const BgImg:React.FC = () => {
 };
 
 export default BgImg;
+

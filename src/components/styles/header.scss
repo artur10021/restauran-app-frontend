@@ -1,7 +1,9 @@
 .header{
-  background-color: black;
+  background-color: #C3073F;
   display: flex;
   height: 100px;
+
+  
   .logoImg{
     position: absolute;
     width: 150px;
@@ -12,12 +14,22 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-left: 150px;
 
     .link{
-      color: darkred;
+      color: #F0EBF4;
       padding: 30px;
       font-size: 20px;
       text-decoration: none;
     }
+  }
+  .log-out{
+    color: #1A1A1D;
+    padding: 30px;
+    font-size: 19px;
+    cursor: pointer;
+    width: 100px;
+
+    margin-right: 30px;
   }
 }

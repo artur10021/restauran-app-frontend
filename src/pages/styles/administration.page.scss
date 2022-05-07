@@ -1,0 +1,34 @@
+.admin-panel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F0EBF4;
+
+  .admin-button {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #F0EBF4;
+    padding: 20px 30px;
+    text-align: center;
+    border: none;
+    clip-path: polygon(7% 0, 93% 0, 100% 50%, 93% 100%, 7% 100%, 0 50%);
+    background-color:#C3073F;
+    background-image: radial-gradient(200% 70% at center 20%, #6F2232 -30%, #950740 49%, #C3073F 50%);
+    background-repeat: no-repeat;
+    transition: background-position-y ease-in-out 250ms;
+    margin-top: 30px;
+    width: 50%;
+  }
+
+  .admin-button:hover {
+    background-position-y: -50px;
+  }
+
+  .admin-button:active {
+    transform: scale(0.97);
+  }
+}

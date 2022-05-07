@@ -1,8 +1,28 @@
 .item-wrapper{
-  padding: 20px;
-  border-style: solid;
-  background-color: darkgray;
+
+  background-color: #6F2232;
+  width: 600px;
+  padding: 10px;
+  margin: 10px;
+
+  .count-input{
+    width: 35px;
+    font-size: 16px;
+    color: #F0EBF4;
+    background-color: #1A1A1D;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .burger-info{
+    display: inline-block;
+    position: relative;
+    bottom: 80px;
+    width: 160px;
+    padding: 15px;
+  }
+
 }
 .item-img{
-  width: 250px;
+  width: 200px;
 }

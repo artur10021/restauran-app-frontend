@@ -8,24 +8,23 @@ const LoginPage: React.FC = () => {
     const [loginInput, setLoginInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
 
-    const navigator = useNavigate();
+    const navigate = useNavigate();
     const dispatch = useDispatch()
 
     const login = async (e: any) => {
         e.preventDefault();
-         dispatch({
+        dispatch({
             type: "LOGIN_USER_REQUEST",
             payload: {
+                navigate: navigate,
                 email: loginInput,
                 password: passwordInput,
             }
         })
-        navigator("/menu")
-
     }
 
     const moveToRegisterPage = () =>{
-        navigator('/registration');
+        navigate('/registration')
     }
 
     return (

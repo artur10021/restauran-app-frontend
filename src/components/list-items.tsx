@@ -16,6 +16,7 @@ const ListItems: React.FC = () => {
     return (
         <div className={"wrapper"}>
             <div className="list-wrapper">
+                <h1>MENU</h1>
                 {burgers.map((item:BurgerItemDto) => <MenuItem
                     key={item.id}
                     id={item.id}

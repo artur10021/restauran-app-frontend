@@ -6,11 +6,11 @@ function* removeItemFromBasketRequest(action:ActionType){
     yield put(removeItemFromBasketAC(action.payload))
 }
 
-function* addBurgerRequest(action:ActionType){
+function* addBurgerToBasketRequest(action:ActionType){
     yield put(addBurgersToBasketAC(action.payload))
 }
 
 export function* basketSaga(){
-    yield takeEvery('ADD_BURGER_REQUEST', addBurgerRequest);
+    yield takeEvery('ADD_BURGER_TO_BASKET_REQUEST', addBurgerToBasketRequest);
     yield takeEvery('REMOVE_ITEM_FROM_BASKET_REQUEST', removeItemFromBasketRequest);
 }

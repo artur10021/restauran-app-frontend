@@ -7,11 +7,11 @@ import {useDispatch} from "react-redux";
 
 const RegisterPage: React.FC = () => {
 
-    const navigator = useNavigate();
-    const dispatch = useDispatch();
-
     const [loginInput, setLoginInput] = useState('');
     const [passwordInput, setPasswordInput] = useState('');
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const register = async (e: any) => {
         e.preventDefault();
@@ -20,12 +20,13 @@ const RegisterPage: React.FC = () => {
             payload: {
                 email: loginInput,
                 password: passwordInput,
+                navigate: navigate,
             }
         })
     }
 
     const moveToLoginPage = () => {
-      navigator('/login');
+        navigate('/login');
     }
 
     return (

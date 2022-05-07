@@ -1,0 +1,17 @@
+.basket-items{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F0EBF4;
+
+
+
+  .basket-item{
+    background-color: #6F2232;
+    width: 600px;
+    padding: 10px;
+    margin: 20px;
+  }
+}
+
+

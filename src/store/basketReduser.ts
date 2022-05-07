@@ -10,7 +10,6 @@ interface Burgers {
 let basket:any = localStorage.getItem("basket")
 if(basket){
     basket = JSON.parse(basket).addedBurgers
-    console.log(basket)
 }
 else{
     basket = []
