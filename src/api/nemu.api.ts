@@ -16,11 +16,26 @@ export async function loadBurgers():Promise<BurgerItemDto[]>{
 }
 
 export async function addBurger(payload:any){
-    console.log(payload)
     try {
         const token = localStorage.getItem('token')
         const response = await axios.post("http://localhost:5000/menu/addBurger",
             payload,
+            {
+                headers:{
+                    Authorization: `Bearer ${token}`,
+                }
+            })
+        return response.data
+    }
+    catch (e){
+        console.log(e)
+    }
+}
+
+export async function deleteItem(id:number){
+    try {
+        const token = localStorage.getItem('token')
+        const response = await axios.delete("http://localhost:5000/menu/deleteItemById/" + `${id}`,
             {
                 headers:{
                     Authorization: `Bearer ${token}`,

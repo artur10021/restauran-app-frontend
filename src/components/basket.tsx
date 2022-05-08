@@ -27,7 +27,7 @@ const Basket:React.FC = () => {
                             />
                         )
                         :
-                        <div>Корзина пуста</div>
+                        <div>is empty</div>
                 }
 
             </div>
